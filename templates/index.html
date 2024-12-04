@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>I like you, do you like me?</h1>
+    <button onclick="accept()">Yes</button>
+    <button id="noButton" onmouseover="moveButton()">No</button>
+    <script>
+        function moveButton() {
+            const button = document.getElementById("noButton");
+            const x = Math.random() * window.innerWidth - 100;
+            const y = Math.random() * window.innerHeight - 50;
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+        function accept() {
+            alert("Thank you for accepting!");
+        }
+    </script>
+</body>
+</html>
